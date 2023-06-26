@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/alexedwards/scs/v2"
-	"github.com/rolixer/bookings/pkg/config"
-	"github.com/rolixer/bookings/pkg/handlers"
-	"github.com/rolixer/bookings/pkg/render"
+	"github.com/rolixer/bookings/internal/config"
+	"github.com/rolixer/bookings/internal/handlers"
+	"github.com/rolixer/bookings/internal/render"
 )
 
 const portNumber = ":8080"

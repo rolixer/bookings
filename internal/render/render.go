@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 
 	"github.com/justinas/nosurf"
-	"github.com/rolixer/bookings/pkg/config"
-	"github.com/rolixer/bookings/pkg/models"
+	"github.com/rolixer/bookings/internal/config"
+	"github.com/rolixer/bookings/internal/models"
 )
 
 var functions = template.FuncMap{}
