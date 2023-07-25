@@ -1,0 +1,57 @@
+Table users {
+    id int  [pk, increment]
+    first_name varchar(255)
+    last_name varchar(255)
+    email varchar(255)
+    password varchar(255)
+    access_level int
+    created_at timestamp
+    updated_at timestamp
+}
+
+
+Table rooms {
+    id int  [pk, increment]
+    room_name varchar(255)
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table reservations {
+    id int  [pk, increment]
+    first_name varchar(255)
+    last_name varchar(255)
+    email varchar(255)
+    phone varchar(255)
+    start_date date
+    end_date date
+    room_id int 
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table room_restriction {
+    id int [pk, increment]
+    start_date date
+    end_date date
+    room_id int
+    reservation_id int
+    restriction_id int
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table resetrictions {
+    id int [pk, increment]
+    resetriction_name varchar(255)
+    created_at timestamp
+    updated_at timestamp
+    
+}
+
+// Relations
+
+Ref: reservations.room_id > rooms.id
+Ref: room_restriction.room_id > rooms.id
+Ref: room_restriction.reservation_id > reservations.id
+Ref: room_restriction.restriction_id > resetrictions.id

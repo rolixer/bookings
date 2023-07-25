@@ -1,6 +1,6 @@
 module github.com/rolixer/bookings
 
-go 1.15
+go 1.18
 
 require (
 	github.com/alexedwards/scs/v2 v2.4.0
